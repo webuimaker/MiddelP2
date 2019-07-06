@@ -2,39 +2,16 @@ doctype html
 html
   head
     = partial 'layouts/meta'
-	link[href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"]
-    link[href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel="stylesheet"]
-    link[href="https://unpkg.com/tachyons@4/css/tachyons.min.css" rel="stylesheet"]
-	link[rel="shortcut icon" type="image/png" href="/images/favicon.png"]
     
-    = stylesheet_link_tag "style"
-    = stylesheet_link_tag "bootstrap-grid.min"
-    = stylesheet_link_tag "main"
-	
-	script[type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"]
-    script[type="text/javascript" async="" src="https://js.driftt.com/include/1561817100000/79meyurg255p.js"]
-    script[type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"]
-    script[async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-W4W6MF6"]
-    script[type="text/javascript"]
-     |  dataLayer = [{ 'pageCategory': 'index.html' }]; 
-	 
-	script[type="text/javascript"]
-     | (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-W4W6MF6');
-   
-    style[type="text/css"]
-     |  /* Chart.js */ @-webkit-keyframes chartjs-render-animation { from { opacity: 0.99 } to { opacity: 1 } } @keyframes chartjs-render-animation { from { opacity: 0.99 } to { opacity: 1 } } .chartjs-render-monitor { -webkit-animation: chartjs-render-animation 0.001s; animation: chartjs-render-animation 0.001s; } 
+    = stylesheet_link_tag "all"
 
-    link[href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css"]
-    link[rel="stylesheet" href="css/main.css"]
-	
-	
     // Include netlify identity widget for user registration
     script src="https://identity.netlify.com/v1/netlify-identity-widget.js" type="text/javascript" 
   body
-    .mainOutter id="#{current_page.data.id}"
-	
-      = partial 'partials/shared/header-primary'
+    = partial 'partials/shared/header-primary'
 
+    main.main-content
       = yield
+    = partial 'partials/shared/footer'
 
-      = javascript_include_tag 'bundle', async: true
+    = javascript_include_tag 'main', async: true
