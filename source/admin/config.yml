@@ -69,6 +69,18 @@ collections:
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
+
+  - name: settings
+    label: Settings
+    files:
+      - file: data/settings/newsletter.yml
+        label: Newsletter
+        name: newsletter
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Button Text, name: btnText, widget: string}
+          - {label: Button Url, name: btnUrl, widget: string}
+          - {label: Button Target, name: target, widget: string}
       - file: data/settings/units.yml
         label: Units
         name: units
