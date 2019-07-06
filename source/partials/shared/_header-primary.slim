@@ -1,15 +1,39 @@
-header.header-primary
-  .logo
-    = link_to '/'
-      = image_tag 'logo.svg', alt: 'Kaldi'
 
-  a.nav-button href='#'
-    = image_tag 'nav-open.svg', class: 'open'
-    = image_tag 'nav-close.svg', class: 'close'
-
-  nav.navigation
-    ul
-      - data.settings.navigation.nav_items.each do | nav_item |
-        li
-          = nav_link nav_item.label, nav_item.path
-
+  #topheader.container
+    .relative.flex.items-center.justify-between.mb5.pl3.pr3.pl0-m.pl0-l.pr0-m.pr0-l
+      .logo
+        = link_to '/'
+          = image_tag 'logo-no-words.png', alt: 'Kaldi', class: 'img-responsive'
+      .dn-l
+        button.js-menu-open.ma0.pa0.bg-white.b--white.outline-0
+          img[width="28" src="images/menu-open.png"]
+        .mobile-menu.absolute.top-0.right-0.z3.pt3.pb5.pl4.pr4.br2
+          .tr
+            button.js-menu-close.ma0.pa0.bg-white.b--white.outline-0
+              img[src="images/menu-close.png" width="14"]
+          .pa1.flex.items-center.flex-wrap
+            .w-50.mb3
+              a#datascroll.navigate[data-target="#data-wrapper"]
+                | DATA
+            .w-50.mb3
+              a#demoscroll.navigate[data-target="#enterprise"]
+                | ENTERPRISE
+            .w-50.mb3
+              a#newsletterscroll.navigate[data-target="#pricing"]
+                | REPORTS
+            .w-50.mb3
+              a[href="mailto:hello@meetglimpse.com?subject=Partnership"]
+                | PARTNERSHIPS
+          .mt3
+            a#newsletterscroll.navigate.btn.btn--small.btn-subscribe.ttu[data-target="#pricing"]
+              |  Subscribe 
+      .nav.dn.db-l	  
+        - data.settings.navigation.nav_items.each do | nav_item |
+          span.navspan
+            = nav_link nav_item.label, nav_item.path, id: nav_item.id, class: 'navigate', 'data-target': nav_item.target
+			
+        a#newsletterscroll.navigate.btn.btn--small.btn-subscribe.ttu[data-target="#pricing"]
+          |  Subscribe 
+		  
+  .spacer20.hidden-xs
+  .spacer65.visible-xs.top-spacer
