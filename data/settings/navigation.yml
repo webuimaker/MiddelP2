@@ -1,4 +1,5 @@
 nav_items: 
-  - {label: 'DATA', path: '#data-wrapper', id: 'datascroll', target: '#data-wrapper'}
-  - {label: 'REPORTS', path: '#pricing', id: 'newsletterscroll', target: '#pricing'}  
-  - {label: 'ENTERPRISE', path: '#enterprise', id: 'demoscroll', target: '#enterprise'}
+  - {label: 'Home', path: '/'}
+  - {label: 'Products', path: '/products/'}
+  - {label: 'News', path: '/news'}
+
