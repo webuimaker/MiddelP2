@@ -1,0 +1,13 @@
+.card.one-blog-post-card.datacont
+  ul.rest-posts    
+    //get the first two most recent posts
+    - blog.articles.first(3).each do | article |
+	  li
+	    = link_to article
+           = article.data.title	  
+    li
+      a[href="/news/"]
+        span
+          |  More articles 
+        span
+          | →

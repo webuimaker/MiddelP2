@@ -4,10 +4,10 @@ meta content="ie=edge" http-equiv="x-ua-compatible"
 meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"
 
 // Set dynamic and default meta
-- title = current_page.data.title || "Kaldi - Middleman + Netlify CMS Example"
-- description = current_page.data.description || "A simple example to get started with Middleman and Netlify CMS"
+- title = current_page.data.title || "Glimpse - Discover Exploding Trends Before They Take Off"
+- description = current_page.data.description || "Meet Glimpse - Discover exploding trends before they take off, from rapidly growing industries to viral products and under-the-radar companies that are catching on."
 //Change this to your domain
-- url = "https://brave-hypatia-0b12fd.netlify.com"
+- url = "#"
 - image = current_page.data.image || "/images/uploads/homepage-hero.jpg"
 
 title =title
@@ -19,8 +19,12 @@ meta property="og:description" content=description
 meta property="og:image" content=(url + image_path(image))
 meta property="og:url" content=(url + current_page.url)
 meta property="og:type" content="website"
+meta property="og:site_name" content="Glimpse - See the Future Before it Happens"
 
 meta name="twitter:card" content="summary_large_image"
 meta name="twitter:title" content=title
 meta name="twitter:description" content=description
 meta name="twitter:image" content=(url + image_path(image))
+meta name="twitter:url" content=url
+
+    

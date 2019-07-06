@@ -1,0 +1,203 @@
+#blog{
+    padding-top: 40px;
+    h1 {
+        font-size: 30px;
+    }
+    .subhead {
+        font-size: 2rem;
+    }
+    .blogs{
+        background-image: url(../images/bg-posts.png);
+        background-size: cover;
+        background-position: center 30px;
+        background-repeat: no-repeat;
+        position: relative;
+        &:before{
+            content:"";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 600px;
+            background-image: url(../images/bg-posts-footer.png);
+            background-size:cover;
+            background-position: top right;
+
+        }
+    }
+    .one-post-card{
+        padding: 20px;
+        margin-bottom:30px;
+        color: #000;
+        transition:.3s;
+        border: 2px solid transparent;
+        background-color: #fff;
+        &:hover{
+            box-shadow:none;
+            border-color: #4c7ef1;
+        }
+        a{
+            color: #000;
+            text-decoration: none
+        } 
+        img{
+            width: 100%;
+            max-width: 150px;
+        }
+        .header{
+            margin-bottom:20px; 
+            .title{
+                font-size: 30px;
+                float: left;
+                margin-right: 15px;
+                width:calc(100% - 85px)!important
+            }
+            .icon{
+                width: 70px;
+                float: right;
+            }
+        }
+        .body{
+            p{
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            img{
+                display: none;
+            }
+        }
+    }
+    .card-content{
+        box-shadow: 0 2px 45px 0 rgba(51,51,51,.3);
+        height: 210px;
+    }
+}
+
+#one-blog{
+    padding-top: 40px;
+    h1 {
+        font-size: 30px;
+    }
+    .subhead {
+        font-size: 2rem;
+    }
+    .main-title{
+        .post-date{
+            float: left;
+            span{
+                font-size: 2.25rem;
+                display: block;
+                margin-top: 10px;
+				text-transform: uppercase;
+				
+            }
+        }
+        .post-author{
+            float: left;
+            a{
+                color: #000;
+                display: inline;
+                text-decoration:none
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    vertical-align: middle;
+                    &:first-child{
+                        margin-right:15px; 
+                        width: 50px;
+                        img{
+                            width:100%;
+                        }
+                    }
+                    &:last-child{
+                        span{
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .one-blog-post-card{
+        padding: 40px 20px;
+        &>span, .proxima-bold{
+            font-size: 36px;
+            margin-bottom: 30px;
+            display: block;
+        }
+        &>p{
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: block;
+        }
+		
+    }
+    .card-content{
+        box-shadow: 0 2px 45px 0 rgba(51,51,51,.3);
+        height: 210px;
+    }
+    .rest-posts{
+        padding-left:0; 
+        li{
+            display: block;
+            &:last-child{
+                &:hover{
+                    span:last-child{
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &:hover{
+                a{
+                    color: #4a79f1;
+                }
+            }
+            a{
+                padding: 30px 0;
+                text-decoration: none;
+                color: #000;
+                font-size: 30px;
+                display: block;
+                border-bottom:1px solid #e5e5e5;
+                transition: .1s;
+                span{
+                    transition: .3s
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    #blog{
+        .one-post-card{
+            .header{
+                .title{
+                    width:100%!important;
+                    margin: 0;
+                }
+                .icon{
+                    display: none;
+                }
+            }
+            .body{
+                img{
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .card-content{
+            box-shadow: 0 2px 45px 0 rgba(51,51,51,.3);
+            height: 250px;
+        }
+    }
+    #one-blog{
+        .card-content{
+            box-shadow: 0 2px 45px 0 rgba(51,51,51,.3);
+            height: 250px;
+        }
+    }
+}
