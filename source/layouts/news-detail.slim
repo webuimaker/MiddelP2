@@ -1,16 +1,30 @@
 = wrap_layout :layout
-  .news-detail
-    .container
+  .container
+    .main-title
       .row
-        .title
-          - date = Date.parse current_page.data.date.to_s
-          span.date = date.strftime("%d-%m-%Y")
-          h1 = current_page.data.title
+        .col-md-12.col-9
+          h1.proxima-semibold.mt0.mb5.mb4-l.mb4-m = current_page.data.title
+        .col-3.d-md-none
+          img[src="images/post-logo.png" alt=""]
+      .clearfix.d-none.d-md-block
+	    .post-date
+		  - date = Date.parse current_page.data.date.to_s
+          span.proxima-light = date.strftime("%b, %e %Y")
+        .post-author
+	      a[href="#"]
+			ul
+				li
+				  = image_tag current_page.data.authorImage, alt: 'current_page.data.authorpName'
+				li
+				  span.proxima-semibold = current_page.data.authorName
+				  span.proxima-light = current_page.data.authorPos
+	.spacer40
+	.row
+	  .col-md-8
+	    .card.one-blog-post-card.datacont
+			
+		  = yield
 
-      .row
-        .image
-          = image_tag current_page.data.image
-
-      .row.content
-        = yield
-
+		= partial 'partials/shared/newsletterbox'
+	  .col-md-4.d-none.d-md-block	    
+		  = partial 'partials/news/sidebar'
