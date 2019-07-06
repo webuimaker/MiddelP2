@@ -69,7 +69,6 @@ collections:
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
-
   - name: settings
     label: Settings
     files:
