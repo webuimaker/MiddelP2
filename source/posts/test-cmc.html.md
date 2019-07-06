@@ -5,7 +5,7 @@ description: >-
   Atlassian grew into a $20 billion dollar company without a formal sales team.
   So how did they do it? We sat down with Jay Simons
 image: /images/uploads/post-logo.png
-pageid: one-blog
+id: one-blog
 authorName: Toni
 authorPos: Team Lead
 authorImage: /images/uploads/author.jpg
