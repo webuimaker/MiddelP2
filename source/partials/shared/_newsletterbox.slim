@@ -1,0 +1,8 @@
+.spacer30
+.card.contain.relative
+  = image_tag 'graph-line.svg', class: 'trends--graph-line',  height: '130'
+  .card-content.flex-column.br3.relative.z-1
+    h1.proxima-light.tc.pl4.pr4.mt0.mb5 = data.settings.newsletter.title
+	= link_to data.settings.newsletter.target, class: 'btn btn--large ttu navigate ctascrollbutton', id: 'see-new', 'data-target': data.settings.newsletter.target
+	  = data.settings.newsletter.btnText
+.spacer30

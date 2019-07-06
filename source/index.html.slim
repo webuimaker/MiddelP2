@@ -1,0 +1,24 @@
+---
+title: Glimpse - Discover Exploding Trends Before They Take Off
+id: blog
+---
+
+.pl3.pr3
+  h1.proxima-semibold.mt0.mb5.mb4-l.mb4-m.tc-m.tc-l = data.pages.home.title
+  p.subhead.proxima-light.mt0.mb4.mb0-m.mb0-l.tc-m.tc-l  = data.pages.home.subTitle
+.spacer40
+
+.blogs
+  .container
+    .row	  
+      //get the first three most recent posts
+      - blog.articles.first(3).each do | article |
+        = partial 'partials/news/news_item', locals: {article: article}		
+			  
+	= partial 'partials/shared/newsletterbox'
+    .spacer30
+	
+	.row	  
+      //get the  posts
+      - blog.articles.drop(3).each do | article |
+        = partial 'partials/news/news_item', locals: {article: article}

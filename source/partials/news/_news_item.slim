@@ -1,0 +1,10 @@
+    .col-md-4
+        .one-post-card.card.datacont
+		  = link_to article
+            .header.clearfix
+              .title.proxima-bold = article.data.title
+              .icon
+                = image_tag article.data.image
+            .body
+              p = article.data.description
+			  = image_tag article.data.image

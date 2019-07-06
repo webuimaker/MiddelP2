@@ -1,0 +1,12 @@
+---
+id: blog
+---
+section.homepage-news.news
+  .container
+    .col-md-12
+      h2
+        | News
+    .news-items
+      //get the first two most recent posts
+      - blog.articles.each do | article |
+        = partial 'partials/news/news_item', locals: {article: article}
