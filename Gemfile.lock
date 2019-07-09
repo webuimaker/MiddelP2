@@ -10,7 +10,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     autoprefixer-rails (9.5.1.1)
       execjs
-    backports (3.14.0)
+    backports (3.15.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -22,14 +22,12 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.1.5)
-    ffi (1.10.0)
-    ffi (1.10.0-x64-mingw32)
-    haml (5.0.4)
+    ffi (1.11.1-x64-mingw32)
+    haml (5.1.0)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
@@ -93,7 +91,7 @@ GEM
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
     parallel (1.17.0)
-    public_suffix (3.0.3)
+    public_suffix (3.1.1)
     rack (2.0.7)
     rack-livereload (0.3.17)
       rack
@@ -114,13 +112,13 @@ GEM
     tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2019.1)
+    tzinfo-data (1.2019.2)
       tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    wdm (0.1.1)
 
 PLATFORMS
-  ruby
   x64-mingw32
 
 DEPENDENCIES
@@ -130,6 +128,7 @@ DEPENDENCIES
   middleman-livereload
   slim
   tzinfo-data
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
-   1.17.3
+   2.0.2
