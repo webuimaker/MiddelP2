@@ -8,3 +8,5 @@ gem "middleman-livereload"
 gem "slim"
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+gem 'wdm', '>= 0.1.0'
