@@ -18,3 +18,5 @@ Cume in reque idque ullamcorper, feugait accusam constituto ne pro. Eum regione 
 {: .proxima-bold}
 
 Graeco dolorem sensibus vix eu, mea ei eligendi senserit, id his nihil delectus omittantur. Pri ad audire numquam vulputate, ut cum nibh consulatu contentiones, ex dico probo numquam eos. At pro graeco feugiat.
+
+![chart](/images/uploads/comparison-image.jpg "chart")
