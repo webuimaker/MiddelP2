@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'middleman'
-gem "middleman-blog"
-gem 'middleman-autoprefixer'
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
+gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
+gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw, :x64_mingw]
 gem "middleman-livereload"
+gem "middleman-blog"
 
 gem "slim"
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
-
-gem 'wdm', '>= 0.1.0'
