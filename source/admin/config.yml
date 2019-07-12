@@ -24,7 +24,13 @@ collections:
       - {label: Author Name, name: authorName, widget: string}
       - {label: Author Position, name: authorPos, widget: string}
       - {label: Author Image, name: authorImage, widget: image}
-      - {label: Body, name: body, widget: markdown}
+      - {label: Body, name: body, widget: markdown}      
+      - name: "add Chart"
+        label: "chart"
+        widget: "list"
+        fields:
+        - {name: "chart div id", label: "chartid", widget: "string"} # implicitly required by default?
+        - {name: "Upload json file", label: "jsonFile", widget: "file"} # explicitly required
  
       
   - name: pages
