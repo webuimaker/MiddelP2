@@ -24,7 +24,9 @@
 	    .card.one-blog-post-card.datacont
 			
 		  = yield
-
+		  .trends.relative#trends
+		    .relative.z-1#result-data
+			
 		= partial 'partials/shared/newsletterbox'
 	  .col-md-4.d-none.d-md-block	    
 		  = partial 'partials/news/sidebar'

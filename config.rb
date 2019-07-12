@@ -38,14 +38,6 @@ end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-# proxy product.yml files to product.html 
-data.products.each do |product|
-  # product is an array: [filename, {data}]
-  proxy "/product/#{product[1][:title].parameterize}/index.html", "product.html", 
-  locals: {product: product[1]}, 
-  layout: 'product-detail',
-  ignore: true
-end
 
 # Helpers
 # Methods defined in the helpers block are available in templates
@@ -76,10 +68,11 @@ end
 
 configure :build do
   # Minify css on build
-  activate :minify_css
+  #activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript, :ignore => "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none})
+  #activate :minify_javascript, :ignore => "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none})
+  #activate :minify_javascript, :ignore => "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none})
 
   # Use Gzip
   activate :gzip
